@@ -1,0 +1,36 @@
+﻿@model CoreDemo.Models.Movie
+
+    <form asp-action="Add">
+        <input asp-for="CinemaId" type="hidden" value="@Model.CinemaId" />
+        <div class="form-group row">
+            <label class="sr-only" asp-for="Name"></label>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">名称</div>
+                </div>
+                <input type="text" class="form-control" asp-for="Name">
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label class="sr-only" asp-for="Starring"></label>
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Starring</div>
+                </div>
+                <input type="text" class="form-control" asp-for="Starring">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="sr-only" asp-for="ReleasDate"></label>
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">ReleasDate</div>
+                </div>
+                <input type="date" class="form-control" asp-for="ReleasDate">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+

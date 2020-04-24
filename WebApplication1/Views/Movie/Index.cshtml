@@ -1,0 +1,19 @@
+﻿@using CoreDemo.Models;
+@model IEnumerable<Movie>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">CinemaId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Starring</th>
+            <th scope="col">Release Date</th>
+            <th scope="col">编辑</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.DisplayForModel()
+    </tbody>
+</table>
+<a asp-action="Add" asp-route-cinemaId="@ViewBag.CinemaId">添加</a>

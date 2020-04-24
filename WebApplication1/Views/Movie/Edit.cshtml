@@ -1,0 +1,47 @@
+﻿@model CoreDemo.Models.Movie
+
+
+    <form asp-action="Edits">
+        <input asp-for="Id" type="hidden" value="@Model.Id" />
+        <div class="form-group row">
+            <label class="sr-only" asp-for="CinemaId"></label>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">电影院ID</div>
+                </div>
+                <input type="text" class="form-control" asp-for="CinemaId" value="@Model.CinemaId">
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label class="sr-only" asp-for="Name"></label>
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">名称</div>
+                </div>
+                <input type="text" class="form-control" asp-for="Name" value="@Model.Name">
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label class="sr-only" asp-for="Starring"></label>
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Starring</div>
+                </div>
+                <input type="text" class="form-control" asp-for="Starring" value="@Model.Starring">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="sr-only" asp-for="ReleasDate"></label>
+            <div class="input-group mb-12">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">ReleasDate</div>
+                </div>
+                <input type="date" class="form-control" asp-for="ReleasDate" value="@Convert.ToDateTime(Model.ReleasDate).ToString("yyyy-MM-dd")">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
